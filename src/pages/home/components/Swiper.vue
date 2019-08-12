@@ -50,15 +50,14 @@ export default {
     background-color: #fff !important
   .wrapper
     background-color: #ccc .2
-    overflow hidden
+    overflow: hidden
     width:100%
     height:0
-    padding-bottom:31.25%
+    padding-bottom:26.7%
    .swiper-pagination-bullet-active
      background-color: red !important
     //在一开始打开界面图片片还没渲染出来的时候，因为图片不存在，所以图片后面的内容会在上面，等图片出来才会下去，有明显抖动
     //如何解决：给轮播图加一个div，div的宽度是100%，高度是宽度的31.25%（根据实际图片看），不能直接给图片定义height31.25%，这样就是相对于父盒子高度31.25，要用padding-bottom
-  .swiper-img{
-   width:100%
- }
+  .swiper-img
+    width:100%
 </style>
