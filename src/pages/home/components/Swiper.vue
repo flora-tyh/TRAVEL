@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper">
-    <swiper :options="swiperOption" ref="mySwiper" @someSwiperEvent="callback">
+    <swiper :options="swiperOption" v-if="showSwiper">
       <!-- slides -->
-      <swiper-slide v-for="item in swiperList" :key="item.id">
+      <swiper-slide v-for="item in list" :key="item.id">
         <img class='swiper-img' :src='item.imgUrl' alt="">
       </swiper-slide>
       <!--<swiper-slide>I'm Slide 3</swiper-slide>-->
@@ -25,20 +25,20 @@
 <script>
 export default {
   name: 'HomeSwiper',
+  props: {
+    list: Array
+  },
   data () {
     return {
       swiperOption: {
         pagination: '.swiper-pagination',
         loop: true
-      },
-      swiperList: [ {
-        id: '0001',
-        imgUrl: 'https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20198/c1dc49b4e28c3f7b3b1fa8d8c64b4bfc.jpg_750x200_8f2bf534.jpg'
-      }, {
-        id: '0002',
-        imgUrl: 'https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/d7bbc21db442366a882e04ddc984669a.jpg_750x200_85e640d9.jpg'
       }
-      ]
+    }
+  },
+  computed: {
+    showSwiper () {
+      return this.list.length
     }
   }
 }
@@ -53,7 +53,7 @@ export default {
     overflow: hidden
     width:100%
     height:0
-    padding-bottom:26.7%
+    padding-bottom:31.2%
    .swiper-pagination-bullet-active
      background-color: red !important
     //在一开始打开界面图片片还没渲染出来的时候，因为图片不存在，所以图片后面的内容会在上面，等图片出来才会下去，有明显抖动
