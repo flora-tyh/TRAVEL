@@ -50,12 +50,12 @@ export default {
           clearTimeout(this.timer)
         }
         this.timer = setTimeout(() => {
-          const touchY = e.touches[0].clientY - 200
+          const touchY = e.touches[0].clientY - 210
           const index = Math.floor((touchY - this.startY) / 20)
           if (index >= 0 && index < this.letters.length) {
             this.$emit('change', this.letters[index])
           }
-        }, 16)
+        }, 0)
       }
     },
     handleTouchEnd () {
