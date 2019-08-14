@@ -5,6 +5,7 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import App from './App'
 import router from './router'
 import fastClick from 'fastclick'
+import store from './store'
 import './assets/styles/reset.css'
 import './assets/styles/border.css'
 import './assets/styles/iconfont.css'
@@ -19,6 +20,7 @@ new Vue({
   el: '#app',
   // router:router的缩写
   router,
+  store,
   components: { App },
   // 上面这句话是components: { App：App }省略的写法，在es6中如果键和值是一样的，可以省略
   template: '<App/>'
