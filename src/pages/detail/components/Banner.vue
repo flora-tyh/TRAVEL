@@ -22,7 +22,7 @@ export default {
   name: 'DetailBanner',
   data () {
     return {
-      showGallary:false,
+      showGallary: false,
       imgs: ['//img1.qunarzz.com/sight/p0/201301/08/74b6290e6bf5cd1e93835fbb.jpg', '//img1.qunarzz.com/sight/p0/201301/08/74b6290e6bf5cd1e93835fbb.jpg']
     }
   },

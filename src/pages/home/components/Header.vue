@@ -1,16 +1,16 @@
 <template>
   <div class="header">
       <div class="header-left">
-        <span class="iconfont back-icon">&#xe624;</span>
+        <span class="iconfont back-icon">&#xe610;</span>
       </div>
       <div class="header-input">
-        <span class="iconfont">&#xe632;</span>
+        <span class="iconfont">&#xe6cf;</span>
         输入城市景点游玩主题
       </div>
       <router-link to="/city/">
         <div class="header-right">
           {{this.city}}
-         <span class="iconfont arrow-icon">&#xe64a;</span>
+         <span class="iconfont arrow-icon">&#xe61c;</span>
         </div>
       </router-link>
   </div>
@@ -41,6 +41,7 @@ export default {
    color:#fff
    background-color: $bgColor
   .header-left
+    padding:.1rem
     width: .64rem
     float:left
     .back-icon
@@ -52,7 +53,7 @@ export default {
     color:#ccc
     text-align left
     line-height: .64rem
-    margin-top: .11rem
+    margin-top: .2rem
     margin-left:.2rem
     background-color: #fff
     border-radius :.1rem

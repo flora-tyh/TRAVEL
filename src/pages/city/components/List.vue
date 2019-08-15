@@ -91,6 +91,7 @@ export default {
   &:before
     border-color: #777
   .list
+    margin-top:-1.12rem
     overflow hidden
     position :absolute
     top:2.9rem
